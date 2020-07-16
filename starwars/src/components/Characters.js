@@ -5,11 +5,11 @@ import styled from "styled-components";
 const Characters = (props) => {
   const { chars } = props;
 
-  const CharCard = styled.div`
+  const CharWrapper = styled.div`
     transition: transform 0.2s ease-in;
     border-radius: 20px;
     background: "#166191";
-    color: white;
+
     width: 40%;
     height: 40vh;
     display: flex;
@@ -31,19 +31,25 @@ const Characters = (props) => {
     justify-content: space-around;
   `;
 
+  // const CharacterDisplay = styled.div`
+  //   color: black;
+  //   border: 1px solid red;
+  // `;
+
   return (
-    <CharContainer>
+    <CharContainer className="charContainer">
       {chars.map((character) => {
         return (
-          <CharCard>
+          <CharWrapper className="cardWrapper">
             <CharacterDisplay
-              key={character.name}
+              className="charCard"
+              key={character.birth_year}
               name={character.name}
               gender={character.gender}
               height={character.height}
               mass={character.mass}
             />
-          </CharCard>
+          </CharWrapper>
         );
       })}
     </CharContainer>

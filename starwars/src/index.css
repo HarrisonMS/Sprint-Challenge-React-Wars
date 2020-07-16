@@ -3,4 +3,6 @@ body {
   padding: 0;
   font-family: 'Abril Fatface', cursive;
   background-image: url('./sw-bg.jpg');
+  background-size: cover;
+    color: #fffb00;
 }
